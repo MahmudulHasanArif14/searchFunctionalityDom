@@ -35,7 +35,8 @@ searchInput.addEventListener('keyup', function() {
     peoplesContainer.innerHTML = '';
 
     peoples.filteredUsernames = peoples.userName.filter(function(username) {
-        return username.toLowerCase().trim().includes(searchTerm);
+        // return username.toLowerCase().trim().includes(searchTerm);
+        return username.toLowerCase().startsWith(searchTerm);
     });
 
     if (peoples.filteredUsernames.length > 0) {
